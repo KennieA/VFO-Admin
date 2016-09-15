@@ -43,7 +43,6 @@ namespace WDAdmin.WebUI.Controllers
             _handler = ResourceHandler.GetInstance;
         }
 
-        #region //--------------DataService---------------------//
 
         /// <summary>
         /// Service user authorization
@@ -258,6 +257,47 @@ namespace WDAdmin.WebUI.Controllers
         }
 
         /// <summary>
+        /// Get video data for VFO client
+        /// </summary>
+        /// <param name="id">User ID</param>
+        /// <returns>Serialized data object with videos</returns>
+        [HttpGet]
+        public object GetVideos(int id)
+        {
+            //Test situation (-1) - Normal user
+            var userId = id == -1 ? (from use in _repository.Get<User>() select use.Id).First() : id;
+            Logger.Log("GetVideos InitOK", "UserId: " + userId, LogType.Ok, LogEntryType.Info);
+
+            //Get s allowed for the user group
+            var allVideos = (from use in _repository.Get<User>()
+                           where use.Id == id
+                           join ugr in _repository.Get<UserGroup>() on use.UserGroupId equals ugr.Id
+                           join vid in _repository.Get<Video>() on ugr.Id equals vid.UserGroupId
+                           select vid).ToList();
+
+
+            var unityData = new List<VideoData>();
+            foreach (var vid in allVideos)
+            {
+                var video = new VideoData
+                {
+                    Id = vid.Id,
+                    Name = vid.Name,
+                    Description = vid.Description,
+                    Url = vid.Url,
+                    Count = vid.Count,
+                    UserGroupId = vid.UserGroupId,
+                    UserId = vid.UserId,
+                    ReleaseDate = vid.ReleaseDate
+                };
+                unityData.Add(video);
+            }
+
+            Logger.Log("GetVideos FinalOK", "UserId: " + userId, LogType.Ok, LogEntryType.Info);
+            return JsonConvert.SerializeObject(unityData);
+        }
+
+        /// <summary>
         /// Data save for VFO client
         /// </summary>
         /// <param name="jobject">Collection of data from VFO client</param>
@@ -318,6 +358,49 @@ namespace WDAdmin.WebUI.Controllers
             return true;
         }
 
-        #endregion
+        /// <summary>
+        /// VideoData save for VFO client
+        /// </summary>
+        /// <param name="jobject">Collection of videodata from VFO client</param>
+        /// <returns>Result of the videodata save</returns>
+        [HttpPost]
+        [JsonFilter(Param = "jobject", RootType = typeof(VideoData))]
+        public bool SaveVideo(VideoData jobject)
+        {
+            var unityData = jobject;
+            var stamp = DateTime.Now; //Get the current timestamp
+            int userId;
+
+            //Resolve user id
+            if (unityData.UserId != -1) //Not test case
+            {
+                userId = unityData.UserId; //Get Id from JSON string
+            }
+            else //Test case, take the last user available
+            {
+                userId = (from use in _repository.Get<User>() select use.Id).First();
+            }
+
+            Logger.Log("SaveVideo InitOK", "UserId: " + userId, LogType.Ok, LogEntryType.Info);
+
+            using (var transaction = TransactionScopeUtils.CreateTransactionScope())
+            {
+                
+                    var video = new Video { Id = unityData.Id, Name = unityData.Name, Description = unityData.Description, Url = unityData.Url,
+                        Count = unityData.Count, UserGroupId = unityData.UserGroupId, UserId = userId, ReleaseDate = stamp };
+
+                    if (!CreateEntity(video, "SaveVideo Video Error", "UserId: " + userId, LogType.DbCreateError))
+                    {
+                        return false;
+                    }
+
+                transaction.Complete();
+            }
+
+            Logger.Log("SaveVideo FinalOK", "UserId: " + userId, LogType.DbCreateOk, LogEntryType.Info);
+            return true;
+        }
+
+
     }
 }

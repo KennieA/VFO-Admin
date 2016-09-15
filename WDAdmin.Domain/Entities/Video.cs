@@ -16,6 +16,9 @@ namespace WDAdmin.Domain.Entities
         public string Name { get; set; }
 
         [Column]
+        public string Description { get; set; }
+
+        [Column]
         public string Url { get; set; }
 
         [Column]

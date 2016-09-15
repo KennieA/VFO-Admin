@@ -77,6 +77,12 @@ namespace WDAdmin.WebUI.Models
         [DataMember]
         public string Name { get; set; }
         /// <summary>
+        /// Gets or sets the description.
+        /// </summary>
+        /// <value>The description.</value>
+        [DataMember]
+        public string Description { get; set; }
+        /// <summary>
         /// Gets or sets the url.
         /// </summary>
         /// <value>The url.</value>
@@ -109,9 +115,45 @@ namespace WDAdmin.WebUI.Models
     }
 
     /// <summary>
-    /// Class ExerciseData.
+    /// Class CategoryData.
     /// </summary>
     [DataContract]
+    public class VideoUserViewData
+    {
+        /// <summary>
+        /// Gets or sets the identifier.
+        /// </summary>
+        /// <value>The identifier.</value>
+        [DataMember]
+        public int Id { get; set; }
+
+        /// <summary>
+        /// Gets or sets the video identifier.
+        /// </summary>
+        /// <value>The videoId.</value>
+        [DataMember]
+        public int VideoId { get; set; }
+
+        /// <summary>
+        /// Gets or sets the user identifier.
+        /// </summary>
+        /// <value>The userid.</value>
+        [DataMember]
+        public int UserId { get; set; }
+
+        /// <summary>
+        /// Gets or sets the ViewDate.
+        /// </summary>
+        /// <value>The viewdate.</value>
+        [DataMember]
+        public DateTime ViewDate { get; set; }
+    }
+
+
+    /// <summary>
+        /// Class ExerciseData.
+        /// </summary>
+        [DataContract]
     public class ExerciseData
     {
         /// <summary>
