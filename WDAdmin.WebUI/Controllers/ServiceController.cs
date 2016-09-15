@@ -386,7 +386,7 @@ namespace WDAdmin.WebUI.Controllers
             using (var transaction = TransactionScopeUtils.CreateTransactionScope())
             {
                 
-                    var video = new Video { Id = unityData.Id, Name = unityData.Name, Description = unityData.Description, Url = unityData.Url,
+                    var video = new Video {Name = unityData.Name, Description = unityData.Description, Url = unityData.Url,
                         Count = unityData.Count, UserGroupId = unityData.UserGroupId, UserId = userId, ReleaseDate = stamp };
 
                     if (!CreateEntity(video, "SaveVideo Video Error", "UserId: " + userId, LogType.DbCreateError))
