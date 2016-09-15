@@ -1,0 +1,13 @@
+C:\Users\Martin\Documents\Visual Studio 2013\Projects\WD.VFO.Admin\Main\WDAdmin.Resources\bin\Debug\WDAdmin.Resources.dll
+C:\Users\Martin\Documents\Visual Studio 2013\Projects\WD.VFO.Admin\Main\WDAdmin.Resources\bin\Debug\WDAdmin.Resources.pdb
+C:\Users\Martin\Documents\Visual Studio 2013\Projects\WD.VFO.Admin\Main\WDAdmin.Resources\bin\Debug\sv-SE\WDAdmin.Resources.resources.dll
+C:\Users\Martin\Documents\Visual Studio 2013\Projects\WD.VFO.Admin\Main\WDAdmin.Resources\bin\Debug\en-US\WDAdmin.Resources.resources.dll
+C:\Users\Martin\Documents\Visual Studio 2013\Projects\WD.VFO.Admin\Main\WDAdmin.Resources\obj\Debug\WDAdmin.Resources.LangResources.resources
+C:\Users\Martin\Documents\Visual Studio 2013\Projects\WD.VFO.Admin\Main\WDAdmin.Resources\obj\Debug\WDAdmin.Resources.LangResources.sv-SE.resources
+C:\Users\Martin\Documents\Visual Studio 2013\Projects\WD.VFO.Admin\Main\WDAdmin.Resources\obj\Debug\WDAdmin.Resources.LangResources.en-US.resources
+C:\Users\Martin\Documents\Visual Studio 2013\Projects\WD.VFO.Admin\Main\WDAdmin.Resources\obj\Debug\VFO.Resources.csproj.GenerateResource.Cache
+C:\Users\Martin\Documents\Visual Studio 2013\Projects\WD.VFO.Admin\Main\WDAdmin.Resources\obj\Debug\sv-SE\WDAdmin.Resources.resources.dll
+C:\Users\Martin\Documents\Visual Studio 2013\Projects\WD.VFO.Admin\Main\WDAdmin.Resources\obj\Debug\en-US\WDAdmin.Resources.resources.dll
+C:\Users\Martin\Documents\Visual Studio 2013\Projects\WD.VFO.Admin\Main\WDAdmin.Resources\obj\Debug\WDAdmin.Resources.dll
+C:\Users\Martin\Documents\Visual Studio 2013\Projects\WD.VFO.Admin\Main\WDAdmin.Resources\obj\Debug\WDAdmin.Resources.pdb
+C:\Users\Martin\Documents\Visual Studio 2013\Projects\WD.VFO.Admin\Main\WDAdmin.Resources\obj\Debug\VFO.Resources.csprojResolveAssemblyReference.cache

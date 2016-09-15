@@ -1,0 +1,8 @@
+C:\Users\Martin\Documents\Visual Studio 2013\Projects\WD.VFO.Admin\Main\Migration\bin\Debug\Migration.exe.config
+C:\Users\Martin\Documents\Visual Studio 2013\Projects\WD.VFO.Admin\Main\Migration\bin\Debug\Migration.exe
+C:\Users\Martin\Documents\Visual Studio 2013\Projects\WD.VFO.Admin\Main\Migration\bin\Debug\Migration.pdb
+C:\Users\Martin\Documents\Visual Studio 2013\Projects\WD.VFO.Admin\Main\Migration\bin\Debug\WDAdmin.Domain.dll
+C:\Users\Martin\Documents\Visual Studio 2013\Projects\WD.VFO.Admin\Main\Migration\bin\Debug\WDAdmin.Domain.pdb
+C:\Users\Martin\Documents\Visual Studio 2013\Projects\WD.VFO.Admin\Main\Migration\obj\Debug\Migration.csprojResolveAssemblyReference.cache
+C:\Users\Martin\Documents\Visual Studio 2013\Projects\WD.VFO.Admin\Main\Migration\obj\Debug\Migration.exe
+C:\Users\Martin\Documents\Visual Studio 2013\Projects\WD.VFO.Admin\Main\Migration\obj\Debug\Migration.pdb
