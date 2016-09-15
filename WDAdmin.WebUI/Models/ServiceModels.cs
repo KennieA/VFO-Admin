@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Runtime.Serialization;
+using System.Web.Mvc;
 
 namespace WDAdmin.WebUI.Models
 {
@@ -54,6 +56,56 @@ namespace WDAdmin.WebUI.Models
         /// <value>The exercises.</value>
         [DataMember]
         public List<ExerciseData> Exercises { get; set; }
+    }
+
+    /// <summary>
+    /// Class CategoryData.
+    /// </summary>
+    [DataContract]
+    public class VideoData
+    {
+        /// <summary>
+        /// Gets or sets the identifier.
+        /// </summary>
+        /// <value>The identifier.</value>
+        [DataMember]
+        public int Id { get; set; }
+        /// <summary>
+        /// Gets or sets the name.
+        /// </summary>
+        /// <value>The name.</value>
+        [DataMember]
+        public string Name { get; set; }
+        /// <summary>
+        /// Gets or sets the url.
+        /// </summary>
+        /// <value>The url.</value>
+        [DataMember]
+        public string Url { get; set; }
+        /// <summary>
+        /// Gets or sets the count.
+        /// </summary>
+        /// <value>The count.</value>
+        [DataMember]
+        public int Count { get; set; }
+        /// <summary>
+        /// Gets or sets the usergroup identifier.
+        /// </summary>
+        /// <value>The userGroupId.</value>
+        [DataMember]
+        public int UserGroupId { get; set; }
+        /// <summary>
+        /// Gets or sets the user identifier.
+        /// </summary>
+        /// <value>The userid.</value>
+        [DataMember]
+        public int UserId { get; set; }
+        /// <summary>
+        /// Gets or sets the releasedate.
+        /// </summary>
+        /// <value>The releasedate.</value>
+        [DataMember]    
+        public DateTime ReleaseDate { get; set; }
     }
 
     /// <summary>
