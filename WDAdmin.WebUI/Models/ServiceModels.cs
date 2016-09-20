@@ -26,6 +26,17 @@ namespace WDAdmin.WebUI.Models
         public List<CategoryData> Categories { get; set; }
     }
 
+    [DataContract]
+    public class QRVideoCollection
+    {
+        /// <summary>
+        /// Gets or sets the QR-videos.
+        /// </summary>
+        /// <value>The QR-videos.</value>
+        [DataMember]
+        public List<QRVideoData> QRVideos { get; set; }
+    }
+
     /// <summary>
     /// Class CategoryData.
     /// </summary>
@@ -62,7 +73,7 @@ namespace WDAdmin.WebUI.Models
     /// Class CategoryData.
     /// </summary>
     [DataContract]
-    public class VideoData
+    public class QRVideoData
     {
         /// <summary>
         /// Gets or sets the identifier.

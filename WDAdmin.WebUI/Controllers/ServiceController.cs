@@ -262,7 +262,7 @@ namespace WDAdmin.WebUI.Controllers
         /// <param name="id">User ID</param>
         /// <returns>Serialized data object with videos</returns>
         [HttpGet]
-        public object GetVideos(int id)
+        public object GetQRVideos(int id)
         {
             //Test situation (-1) - Normal user
             var userId = id == -1 ? (from use in _repository.Get<User>() select use.Id).First() : id;
@@ -276,10 +276,11 @@ namespace WDAdmin.WebUI.Controllers
                            select vid).ToList();
 
 
-            var unityData = new List<VideoData>();
+            var unityData = new QRVideoCollection { QRVideos = new List<QRVideoData>() };
+            //var unityData = new List<QRVideoData>();
             foreach (var vid in allVideos)
             {
-                var video = new VideoData
+                var video = new QRVideoData
                 {
                     Id = vid.Id,
                     Name = vid.Name,
@@ -290,7 +291,8 @@ namespace WDAdmin.WebUI.Controllers
                     UserId = vid.UserId,
                     ReleaseDate = vid.ReleaseDate
                 };
-                unityData.Add(video);
+                //unityData.Add(video);
+                unityData.QRVideos.Add(video);
             }
 
             Logger.Log("GetVideos FinalOK", "UserId: " + userId, LogType.Ok, LogEntryType.Info);
@@ -364,17 +366,16 @@ namespace WDAdmin.WebUI.Controllers
         /// <param name="jobject">Collection of videodata from VFO client</param>
         /// <returns>Result of the videodata save</returns>
         [HttpPost]
-        [JsonFilter(Param = "jobject", RootType = typeof(VideoData))]
-        public bool SaveVideo(VideoData jobject)
+        [JsonFilter(Param = "jobject", RootType = typeof(QRVideoData))]
+        public bool SaveQRVideo(QRVideoData jobject)
         {
-            var unityData = jobject;
             var stamp = DateTime.Now; //Get the current timestamp
             int userId;
 
             //Resolve user id
-            if (unityData.UserId != -1) //Not test case
+            if (jobject.UserId != -1) //Not test case
             {
-                userId = unityData.UserId; //Get Id from JSON string
+                userId = jobject.UserId; //Get Id from JSON string
             }
             else //Test case, take the last user available
             {
@@ -386,8 +387,8 @@ namespace WDAdmin.WebUI.Controllers
             using (var transaction = TransactionScopeUtils.CreateTransactionScope())
             {
                 
-                    var video = new Video {Name = unityData.Name, Description = unityData.Description, Url = unityData.Url,
-                        Count = unityData.Count, UserGroupId = unityData.UserGroupId, UserId = userId, ReleaseDate = stamp };
+                    var video = new Video {Name = jobject.Name, Description = jobject.Description, Url = jobject.Url,
+                        Count = jobject.Count, UserGroupId = jobject.UserGroupId, UserId = userId, ReleaseDate = stamp };
 
                     if (!CreateEntity(video, "SaveVideo Video Error", "UserId: " + userId, LogType.DbCreateError))
                     {
@@ -401,6 +402,90 @@ namespace WDAdmin.WebUI.Controllers
             return true;
         }
 
+        [HttpPost]
+        [JsonFilter(Param = "jobject", RootType = typeof (VideoUserViewData))]
+        public bool SaveQRVideoUserViewData(VideoUserViewData jobject)
+        {
+            var stamp = DateTime.Now; //Get the current timestamp
+            int userId;
 
+            //Resolve user id
+            if (jobject.UserId != -1) //Not test case
+            {
+                userId = jobject.UserId; //Get Id from JSON string
+            }
+            else //Test case, take the last user available
+            {
+                userId = (from use in _repository.Get<User>() select use.Id).First();
+            }
+
+            Logger.Log("SaveVideoUserView InitOK", "UserId: " + userId, LogType.Ok, LogEntryType.Info);
+
+            using (var transaction = TransactionScopeUtils.CreateTransactionScope())
+            {
+
+                var videoUserView = new VideoUserView
+                {
+                    VideoId = jobject.VideoId,
+                    UserId = userId,
+                    ViewDate = stamp
+                };
+
+                if (!CreateEntity(videoUserView, "SaveVideoUserView VideoUserView Error", "UserId: " + userId, LogType.DbCreateError))
+                {
+                    return false;
+                }
+
+                transaction.Complete();
+            }
+
+            Logger.Log("SaveVideoUserView FinalOK", "UserId: " + userId, LogType.DbCreateOk, LogEntryType.Info);
+            return true;
+        }
+
+        [HttpPut]
+        [JsonFilter(Param = "jobject", RootType = typeof (QRVideoData))]
+        public bool UpdateQRVideo(QRVideoData jobject)
+        {
+            int userId;
+            int count = jobject.Count + 1;
+
+            //Resolve user id
+            if (jobject.UserId != -1) //Not test case
+            {
+                userId = jobject.UserId; //Get Id from JSON string
+            }
+            else //Test case, take the last user available
+            {
+                userId = (from use in _repository.Get<User>() select use.Id).First();
+            }
+
+            Logger.Log("UpdateVideo InitOK", "UserId: " + userId, LogType.Ok, LogEntryType.Info);
+
+            using (var transaction = TransactionScopeUtils.CreateTransactionScope())
+            {
+                var video = new Video
+                {
+                    Id = jobject.Id,
+                    Name = jobject.Name,
+                    Description = jobject.Description,
+                    Url = jobject.Url,
+                    Count = count,
+                    UserGroupId = jobject.UserGroupId,
+                    UserId = userId,
+                    ReleaseDate = jobject.ReleaseDate
+                };
+
+                if (!UpdateEntity(video, "SaveVideo Video Error", "UserId: " + userId, LogType.DbCreateError))
+                {
+                    return false;
+                }
+
+                transaction.Complete();
+            }
+
+            Logger.Log("UpdateVideo FinalOK", "UserId: " + userId, LogType.DbCreateOk, LogEntryType.Info);
+            return true;
+        }
     }
 }
