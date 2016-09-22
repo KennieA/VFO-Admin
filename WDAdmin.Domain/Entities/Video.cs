@@ -32,5 +32,8 @@ namespace WDAdmin.Domain.Entities
 
         [Column]
         public DateTime ReleaseDate { get; set; }
+
+        [Column]
+        public string Password { get; set; }
     }
 }

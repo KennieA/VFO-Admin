@@ -16,3 +16,12 @@ C:\Users\Dennis\Desktop\Kosmorama\VFO-Admin\WDAdmin.Domain\bin\Debug\sv-SE\WDAdm
 C:\Users\Dennis\Desktop\Kosmorama\VFO-Admin\WDAdmin.Domain\obj\Debug\VFO.Domain.csprojResolveAssemblyReference.cache
 C:\Users\Dennis\Desktop\Kosmorama\VFO-Admin\WDAdmin.Domain\obj\Debug\WDAdmin.Domain.dll
 C:\Users\Dennis\Desktop\Kosmorama\VFO-Admin\WDAdmin.Domain\obj\Debug\WDAdmin.Domain.pdb
+C:\Users\Kennie\Desktop\Datamatiker\5 Semester Praktik\Kosmorama unity\Admin\VFO-Admin\WDAdmin.Domain\bin\Debug\WDAdmin.Domain.dll
+C:\Users\Kennie\Desktop\Datamatiker\5 Semester Praktik\Kosmorama unity\Admin\VFO-Admin\WDAdmin.Domain\bin\Debug\WDAdmin.Domain.pdb
+C:\Users\Kennie\Desktop\Datamatiker\5 Semester Praktik\Kosmorama unity\Admin\VFO-Admin\WDAdmin.Domain\bin\Debug\WDAdmin.Resources.dll
+C:\Users\Kennie\Desktop\Datamatiker\5 Semester Praktik\Kosmorama unity\Admin\VFO-Admin\WDAdmin.Domain\bin\Debug\WDAdmin.Resources.pdb
+C:\Users\Kennie\Desktop\Datamatiker\5 Semester Praktik\Kosmorama unity\Admin\VFO-Admin\WDAdmin.Domain\bin\Debug\en-US\WDAdmin.Resources.resources.dll
+C:\Users\Kennie\Desktop\Datamatiker\5 Semester Praktik\Kosmorama unity\Admin\VFO-Admin\WDAdmin.Domain\bin\Debug\sv-SE\WDAdmin.Resources.resources.dll
+C:\Users\Kennie\Desktop\Datamatiker\5 Semester Praktik\Kosmorama unity\Admin\VFO-Admin\WDAdmin.Domain\obj\Debug\VFO.Domain.csprojResolveAssemblyReference.cache
+C:\Users\Kennie\Desktop\Datamatiker\5 Semester Praktik\Kosmorama unity\Admin\VFO-Admin\WDAdmin.Domain\obj\Debug\WDAdmin.Domain.dll
+C:\Users\Kennie\Desktop\Datamatiker\5 Semester Praktik\Kosmorama unity\Admin\VFO-Admin\WDAdmin.Domain\obj\Debug\WDAdmin.Domain.pdb

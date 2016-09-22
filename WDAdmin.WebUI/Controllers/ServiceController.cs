@@ -262,7 +262,7 @@ namespace WDAdmin.WebUI.Controllers
         /// <param name="id">User ID</param>
         /// <returns>Serialized data object with videos</returns>
         [HttpGet]
-        public object GetQRVideos(int id)
+        public object GetQrVideos(int id)
         {
             //Test situation (-1) - Normal user
             var userId = id == -1 ? (from use in _repository.Get<User>() select use.Id).First() : id;
@@ -276,11 +276,11 @@ namespace WDAdmin.WebUI.Controllers
                            select vid).ToList();
 
 
-            var unityData = new QRVideoCollection { QRVideos = new List<QRVideoData>() };
+            var unityData = new QrVideoCollection { QRVideos = new List<QrVideoData>() };
             //var unityData = new List<QRVideoData>();
             foreach (var vid in allVideos)
             {
-                var video = new QRVideoData
+                var video = new QrVideoData
                 {
                     Id = vid.Id,
                     Name = vid.Name,
@@ -289,7 +289,8 @@ namespace WDAdmin.WebUI.Controllers
                     Count = vid.Count,
                     UserGroupId = vid.UserGroupId,
                     UserId = vid.UserId,
-                    ReleaseDate = vid.ReleaseDate
+                    ReleaseDate = vid.ReleaseDate,
+                    Password = vid.Password
                 };
                 //unityData.Add(video);
                 unityData.QRVideos.Add(video);
@@ -366,8 +367,8 @@ namespace WDAdmin.WebUI.Controllers
         /// <param name="jobject">Collection of videodata from VFO client</param>
         /// <returns>Result of the videodata save</returns>
         [HttpPost]
-        [JsonFilter(Param = "jobject", RootType = typeof(QRVideoData))]
-        public bool SaveQRVideo(QRVideoData jobject)
+        [JsonFilter(Param = "jobject", RootType = typeof(QrVideoData))]
+        public bool SaveQrVideo(QrVideoData jobject)
         {
             var stamp = DateTime.Now; //Get the current timestamp
             int userId;
@@ -388,7 +389,7 @@ namespace WDAdmin.WebUI.Controllers
             {
                 
                     var video = new Video {Name = jobject.Name, Description = jobject.Description, Url = jobject.Url,
-                        Count = jobject.Count, UserGroupId = jobject.UserGroupId, UserId = userId, ReleaseDate = stamp };
+                        Count = jobject.Count, UserGroupId = jobject.UserGroupId, UserId = userId, ReleaseDate = stamp, Password = jobject.Password };
 
                     if (!CreateEntity(video, "SaveVideo Video Error", "UserId: " + userId, LogType.DbCreateError))
                     {
@@ -404,7 +405,7 @@ namespace WDAdmin.WebUI.Controllers
 
         [HttpPost]
         [JsonFilter(Param = "jobject", RootType = typeof (VideoUserViewData))]
-        public bool SaveQRVideoUserViewData(VideoUserViewData jobject)
+        public bool SaveQrVideoUserViewData(VideoUserViewData jobject)
         {
             var stamp = DateTime.Now; //Get the current timestamp
             int userId;
@@ -444,8 +445,8 @@ namespace WDAdmin.WebUI.Controllers
         }
 
         [HttpPut]
-        [JsonFilter(Param = "jobject", RootType = typeof (QRVideoData))]
-        public bool UpdateQRVideo(QRVideoData jobject)
+        [JsonFilter(Param = "jobject", RootType = typeof (QrVideoData))]
+        public bool UpdateQrVideo(QrVideoData jobject)
         {
             int userId;
             int count = jobject.Count + 1;
@@ -473,7 +474,8 @@ namespace WDAdmin.WebUI.Controllers
                     Count = count,
                     UserGroupId = jobject.UserGroupId,
                     UserId = userId,
-                    ReleaseDate = jobject.ReleaseDate
+                    ReleaseDate = jobject.ReleaseDate,
+                    Password = jobject.Password
                 };
 
                 if (!UpdateEntity(video, "SaveVideo Video Error", "UserId: " + userId, LogType.DbCreateError))

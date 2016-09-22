@@ -27,14 +27,14 @@ namespace WDAdmin.WebUI.Models
     }
 
     [DataContract]
-    public class QRVideoCollection
+    public class QrVideoCollection
     {
         /// <summary>
         /// Gets or sets the QR-videos.
         /// </summary>
         /// <value>The QR-videos.</value>
         [DataMember]
-        public List<QRVideoData> QRVideos { get; set; }
+        public List<QrVideoData> QRVideos { get; set; }
     }
 
     /// <summary>
@@ -73,7 +73,7 @@ namespace WDAdmin.WebUI.Models
     /// Class CategoryData.
     /// </summary>
     [DataContract]
-    public class QRVideoData
+    public class QrVideoData
     {
         /// <summary>
         /// Gets or sets the identifier.
@@ -123,6 +123,12 @@ namespace WDAdmin.WebUI.Models
         /// <value>The releasedate.</value>
         [DataMember]    
         public DateTime ReleaseDate { get; set; }
+        /// <summary>
+        /// Gets or sets the Password.
+        /// </summary>
+        /// <value>The Password.</value>
+        [DataMember]
+        public string Password { get; set; }
     }
 
     /// <summary>

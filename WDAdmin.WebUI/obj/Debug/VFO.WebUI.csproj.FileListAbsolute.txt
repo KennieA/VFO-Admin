@@ -77,3 +77,42 @@ C:\Users\Dennis\Desktop\Kosmorama\VFO-Admin\WDAdmin.WebUI\bin\log4net.xml
 C:\Users\Dennis\Desktop\Kosmorama\VFO-Admin\WDAdmin.WebUI\bin\Ninject.xml
 C:\Users\Dennis\Desktop\Kosmorama\VFO-Admin\WDAdmin.WebUI\bin\en-US\WDAdmin.Resources.resources.dll
 C:\Users\Dennis\Desktop\Kosmorama\VFO-Admin\WDAdmin.WebUI\bin\sv-SE\WDAdmin.Resources.resources.dll
+C:\Users\Kennie\Desktop\Datamatiker\5 Semester Praktik\Kosmorama unity\Admin\VFO-Admin\WDAdmin.WebUI\bin\Views\Email\EmailNewUser.html.cshtml
+C:\Users\Kennie\Desktop\Datamatiker\5 Semester Praktik\Kosmorama unity\Admin\VFO-Admin\WDAdmin.WebUI\bin\Views\Email\ForgottenPassEmail.html.cshtml
+C:\Users\Kennie\Desktop\Datamatiker\5 Semester Praktik\Kosmorama unity\Admin\VFO-Admin\WDAdmin.WebUI\bin\Views\Email\ForgottenPassEmailResponsible.html.cshtml
+C:\Users\Kennie\Desktop\Datamatiker\5 Semester Praktik\Kosmorama unity\Admin\VFO-Admin\WDAdmin.WebUI\bin\crossdomain.xml
+C:\Users\Kennie\Desktop\Datamatiker\5 Semester Praktik\Kosmorama unity\Admin\VFO-Admin\WDAdmin.WebUI\bin\WDAdmin.WebUI.dll.config
+C:\Users\Kennie\Desktop\Datamatiker\5 Semester Praktik\Kosmorama unity\Admin\VFO-Admin\WDAdmin.WebUI\bin\WDAdmin.WebUI.dll
+C:\Users\Kennie\Desktop\Datamatiker\5 Semester Praktik\Kosmorama unity\Admin\VFO-Admin\WDAdmin.WebUI\bin\WDAdmin.WebUI.pdb
+C:\Users\Kennie\Desktop\Datamatiker\5 Semester Praktik\Kosmorama unity\Admin\VFO-Admin\WDAdmin.WebUI\bin\ActionMailer.Net.dll
+C:\Users\Kennie\Desktop\Datamatiker\5 Semester Praktik\Kosmorama unity\Admin\VFO-Admin\WDAdmin.WebUI\bin\ActionMailer.Net.Mvc.dll
+C:\Users\Kennie\Desktop\Datamatiker\5 Semester Praktik\Kosmorama unity\Admin\VFO-Admin\WDAdmin.WebUI\bin\Antlr3.Runtime.dll
+C:\Users\Kennie\Desktop\Datamatiker\5 Semester Praktik\Kosmorama unity\Admin\VFO-Admin\WDAdmin.WebUI\bin\DataAnnotationsExtensions.ClientValidation.dll
+C:\Users\Kennie\Desktop\Datamatiker\5 Semester Praktik\Kosmorama unity\Admin\VFO-Admin\WDAdmin.WebUI\bin\DataAnnotationsExtensions.dll
+C:\Users\Kennie\Desktop\Datamatiker\5 Semester Praktik\Kosmorama unity\Admin\VFO-Admin\WDAdmin.WebUI\bin\log4net.dll
+C:\Users\Kennie\Desktop\Datamatiker\5 Semester Praktik\Kosmorama unity\Admin\VFO-Admin\WDAdmin.WebUI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Kennie\Desktop\Datamatiker\5 Semester Praktik\Kosmorama unity\Admin\VFO-Admin\WDAdmin.WebUI\bin\Ninject.dll
+C:\Users\Kennie\Desktop\Datamatiker\5 Semester Praktik\Kosmorama unity\Admin\VFO-Admin\WDAdmin.WebUI\bin\System.Web.Helpers.dll
+C:\Users\Kennie\Desktop\Datamatiker\5 Semester Praktik\Kosmorama unity\Admin\VFO-Admin\WDAdmin.WebUI\bin\System.Web.Mvc.dll
+C:\Users\Kennie\Desktop\Datamatiker\5 Semester Praktik\Kosmorama unity\Admin\VFO-Admin\WDAdmin.WebUI\bin\System.Web.Optimization.dll
+C:\Users\Kennie\Desktop\Datamatiker\5 Semester Praktik\Kosmorama unity\Admin\VFO-Admin\WDAdmin.WebUI\bin\System.Web.Razor.dll
+C:\Users\Kennie\Desktop\Datamatiker\5 Semester Praktik\Kosmorama unity\Admin\VFO-Admin\WDAdmin.WebUI\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Kennie\Desktop\Datamatiker\5 Semester Praktik\Kosmorama unity\Admin\VFO-Admin\WDAdmin.WebUI\bin\System.Web.WebPages.dll
+C:\Users\Kennie\Desktop\Datamatiker\5 Semester Praktik\Kosmorama unity\Admin\VFO-Admin\WDAdmin.WebUI\bin\System.Web.WebPages.Razor.dll
+C:\Users\Kennie\Desktop\Datamatiker\5 Semester Praktik\Kosmorama unity\Admin\VFO-Admin\WDAdmin.WebUI\bin\WDAdmin.Domain.dll
+C:\Users\Kennie\Desktop\Datamatiker\5 Semester Praktik\Kosmorama unity\Admin\VFO-Admin\WDAdmin.WebUI\bin\WDAdmin.Resources.dll
+C:\Users\Kennie\Desktop\Datamatiker\5 Semester Praktik\Kosmorama unity\Admin\VFO-Admin\WDAdmin.WebUI\bin\WebActivator.dll
+C:\Users\Kennie\Desktop\Datamatiker\5 Semester Praktik\Kosmorama unity\Admin\VFO-Admin\WDAdmin.WebUI\bin\WebGrease.dll
+C:\Users\Kennie\Desktop\Datamatiker\5 Semester Praktik\Kosmorama unity\Admin\VFO-Admin\WDAdmin.WebUI\bin\WDAdmin.Domain.pdb
+C:\Users\Kennie\Desktop\Datamatiker\5 Semester Praktik\Kosmorama unity\Admin\VFO-Admin\WDAdmin.WebUI\bin\WDAdmin.Resources.pdb
+C:\Users\Kennie\Desktop\Datamatiker\5 Semester Praktik\Kosmorama unity\Admin\VFO-Admin\WDAdmin.WebUI\bin\ActionMailer.Net.pdb
+C:\Users\Kennie\Desktop\Datamatiker\5 Semester Praktik\Kosmorama unity\Admin\VFO-Admin\WDAdmin.WebUI\bin\ActionMailer.Net.xml
+C:\Users\Kennie\Desktop\Datamatiker\5 Semester Praktik\Kosmorama unity\Admin\VFO-Admin\WDAdmin.WebUI\bin\ActionMailer.Net.Mvc.pdb
+C:\Users\Kennie\Desktop\Datamatiker\5 Semester Praktik\Kosmorama unity\Admin\VFO-Admin\WDAdmin.WebUI\bin\ActionMailer.Net.Mvc.xml
+C:\Users\Kennie\Desktop\Datamatiker\5 Semester Praktik\Kosmorama unity\Admin\VFO-Admin\WDAdmin.WebUI\bin\log4net.xml
+C:\Users\Kennie\Desktop\Datamatiker\5 Semester Praktik\Kosmorama unity\Admin\VFO-Admin\WDAdmin.WebUI\bin\Ninject.xml
+C:\Users\Kennie\Desktop\Datamatiker\5 Semester Praktik\Kosmorama unity\Admin\VFO-Admin\WDAdmin.WebUI\bin\en-US\WDAdmin.Resources.resources.dll
+C:\Users\Kennie\Desktop\Datamatiker\5 Semester Praktik\Kosmorama unity\Admin\VFO-Admin\WDAdmin.WebUI\bin\sv-SE\WDAdmin.Resources.resources.dll
+C:\Users\Kennie\Desktop\Datamatiker\5 Semester Praktik\Kosmorama unity\Admin\VFO-Admin\WDAdmin.WebUI\obj\Debug\VFO.WebUI.csprojResolveAssemblyReference.cache
+C:\Users\Kennie\Desktop\Datamatiker\5 Semester Praktik\Kosmorama unity\Admin\VFO-Admin\WDAdmin.WebUI\obj\Debug\WDAdmin.WebUI.dll
+C:\Users\Kennie\Desktop\Datamatiker\5 Semester Praktik\Kosmorama unity\Admin\VFO-Admin\WDAdmin.WebUI\obj\Debug\WDAdmin.WebUI.pdb
